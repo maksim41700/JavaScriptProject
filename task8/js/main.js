@@ -8,17 +8,12 @@ let btnStart = document.getElementById('start'),
     incomeValue = document.querySelector('.income-value'),
     monthsavingsValue = document.querySelector('.monthsavings-value'),
     yearsavingsValue = document.querySelector('.yearsavings-value'),
-
     yearValue = document.querySelector('.year-value'),
     monthValue = document.querySelector('.month-value'),
     dayValue = document.querySelector('.day-value'),
-
     expensesItems = document.querySelectorAll('.expenses-item'),
-
     btnExpensesItem = document.querySelector('button.expenses-item-btn'),
     btnOptionalexpenses = document.querySelector('button.optionalexpenses-btn'),
-
-
     btnCount = document.querySelector('button.count-budget-btn'),
     optionalExpensesItems = document.querySelectorAll('.optionalexpenses-item'),
     incomeItem = document.querySelector('#income'),
