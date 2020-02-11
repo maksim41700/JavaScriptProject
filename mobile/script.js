@@ -23,19 +23,21 @@ window.addEventListener('DOMContentLoaded', () => {
         console.log('It works, touchend.');
     })
 
-    // new RegExp('pattern', 'flags');
+     new RegExp('pattern', 'flags');
 
-    // let ans = prompt('fill you mane');
+     let ans = prompt('fill you mane');
 
-    // let reg = /n/ig;
+     let reg = /n/ig;
 
-    // // console.log(ans.search(reg));
+     console.log(ans.test());
+
+    // console.log(ans.search(reg));
     // console.log(ans.match(reg));
 
-    let pass = prompt('enter password');
-    console.log(pass.replace(/./g, '*'));
+    // let pass = prompt('enter password');
+    // console.log(pass.replace(/./g, '*'));
 
-    alert('12-34-56'.replace(/-/g, ':'));
+    // alert('12-34-56'.replace(/-/g, ':'));
 
 
 })
