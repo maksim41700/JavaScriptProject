@@ -122,7 +122,7 @@ window.addEventListener('DOMContentLoaded', () => {
         form.appendChild(statusMessage);
 
         let request = new XMLHttpRequest('POST');
-        request.open('');
+        request.open('test');
     })
 
 });
