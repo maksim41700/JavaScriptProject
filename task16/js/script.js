@@ -36,8 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    //Timer
 
+    //Timer
     let deadLine = '2020-08-28';
 
     function getTimeRemaining(endTime) {
@@ -76,6 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     setClock('timer', deadLine);
 
+
     // Modal
     let more = document.querySelector('.more'),
         overlay = document.querySelector('.overlay'),
@@ -103,6 +104,7 @@ window.addEventListener('DOMContentLoaded', () => {
             showOverlay(this);
         });
     };
+
 
     //Form
     let message = {
@@ -166,6 +168,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
 
+
     //Slider
     let slideIndex = 1,
         slides = document.querySelectorAll('.slider-item'),
@@ -219,4 +222,40 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+
+    //Calc
+    let persons = document.querySelectorAll('.counter-block-input')[0],
+        restDays = document.querySelectorAll('.counter-block-input')[1],
+        place = document.getElementById('select'),
+        totalValue = document.getElementById('total'),
+        personSum = 0,
+        daysSum = 0,
+        total = 0;
+
+    totalValue.innerHTML = 0;
+
+    persons.addEventListener('change', function() {
+        totalValue.innerHTML = calc();
+    });
+
+    restDays.addEventListener('change', function() {
+        totalValue.innerHTML = calc();
+    });
+
+    function calc() {
+
+        if (persons.value == '' || restDays.value == '' || persons.value == '0' || restDays.value == '0') {
+            return 0;
+        } else {
+            personSum = +persons.value;
+            daysSum = +restDays.value;
+            return (personSum + daysSum) * 4000 * place.options[place.selectedIndex].value;
+        }
+    }
+
+    place.addEventListener('change', function() {
+        totalValue.innerHTML = calc();
+    });
+
 });
