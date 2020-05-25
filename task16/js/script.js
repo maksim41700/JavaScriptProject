@@ -84,6 +84,8 @@ window.addEventListener('DOMContentLoaded', () => {
         tabButtons = document.querySelectorAll('.description-btn');
 
     function showOverlay(buttonElement) {
+        let phoneInput = document.querySelector('.popup-form__input');
+        phoneInput.value = localStorage.getItem('phoneInput');
         overlay.style.display = 'block';
         buttonElement.classList.add('more-splash');
         document.body.style.overflow = 'hidden';
@@ -123,8 +125,11 @@ window.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         form.appendChild(statusMessage);
 
+        let phoneInput = document.querySelector('.popup-form__input');
+
         function postData() {
 
+            localStorage.setItem('phoneInput', phoneInput.value);
             return new Promise(function(resolve, reject) {
                 let request = new XMLHttpRequest();
                 request.open('POST', 'server.php');
@@ -230,8 +235,7 @@ window.addEventListener('DOMContentLoaded', () => {
         place = document.getElementById('select'),
         totalValue = document.getElementById('total'),
         personSum = 0,
-        daysSum = 0,
-        total = 0;
+        daysSum = 0;
 
     totalValue.innerHTML = 0;
 
