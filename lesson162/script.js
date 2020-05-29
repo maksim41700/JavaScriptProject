@@ -11,20 +11,20 @@ let number = 1;
 console.log(number);
 
 //2
-let user = (function() {
-    let privat = function() {
-        console.log("I am privat.");
-    }
+// let user = (function() {
+//     let privat = function() {
+//         console.log("I am privat.");
+//     }
 
-    return {
-        sayHello: function() {
-            console.log('Hello!');
-        }
-    }
-}())
+//     return {
+//         sayHello: function() {
+//             console.log('Hello!');
+//         }
+//     }
+// }())
 
-console.log(user);
-console.log(user.sayHello());
+// console.log(user);
+// console.log(user.sayHello());
 
 //3
 let user = (function() {
